@@ -1,22 +1,15 @@
-# codesandbox-nuxt
+<h1 align="center">Drum Fills & Chops Generater</h1>
+<p align="center">
+<a href="http://makeapullrequest.com">
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome">
+</a>
+</p>
+<br>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/18276888/68990230-2ceaf880-0894-11ea-8b07-163a2a571052.png" width="250">
+</p>
 
-> Nuxt starter for CodeSandBox (used for https://template.nuxtjs.org)
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn run dev
-
-# build for production and launch server
-$ yarn run build
-$ yarn start
-
-# generate static project
-$ yarn run generate
-```
-
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## 概要
+ドラムのフィルインを自動で生成します。  
+Nuxt.js + Firebase + Ongaq.js で作成。  

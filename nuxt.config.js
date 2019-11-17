@@ -10,14 +10,14 @@ export default {
    ** Doc: https://vue-meta.nuxtjs.org/api/#metainfo-properties
    */
   head: {
-    title: "Nuxt.js starter for CSB",
+    title: "Drum Fills & Chops Generater by oimo23 | ドラムのフィルインを自動生成するWebサービス",
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         hid: "description",
         name: "description",
-        content: "Official Nuxt.js starter for CodeSandBox"
+        content: "ゴスペルチョップスっぽいフィルインなどを無限に生成することを目的としたサービスです。Nuxt.js、Firebase、Ongaq.js製。"
       }
     ],
     link: [

@@ -134,7 +134,7 @@
           BPM
           <span>-テンポ-</span>
         </h3>
-        <input type="range" v-model="tempo" min="60" max="200">
+        <input type="range" v-model="tempo" @change="tempoChange()" min="60" max="200">
         <p class="bpm">{{ tempo }}</p>
       </section>
     </div>
@@ -165,7 +165,6 @@ export default {
   mounted: function() {
     if (this.$route.query.id) {
       this.loadData();
-      this.ongaqPreparation();
     }
   },
   destroyed() {
@@ -235,9 +234,11 @@ export default {
           this.title = data.title;
           this.keyPatterns = data.keyPatterns;
           this.bars = data.bars;
-          this.tempo = this.tempo;
+          this.tempo = data.tempo;
           this.createdPattern = data.createdPattern;
           this.orchestration = data.orchestration;
+
+          this.ongaqPreparation();
         })
         .catch(function(error) {
           console.log("Error getting documents: ", error);
@@ -385,6 +386,12 @@ export default {
     ongaqPause() {
       this.ongaq.pause();
       this.isPlaying = false;
+    },
+    tempoChange() {
+      if(this.ongaq) {
+        this.ongaq.bpm = this.tempo;
+        console.log(this.ongaq.tempo)
+      }
     },
     generatePattern() {
       this.comboGuide = [];

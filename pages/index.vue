@@ -538,6 +538,8 @@ ul {
 
 .sequencer {
   display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .sequencer__step {

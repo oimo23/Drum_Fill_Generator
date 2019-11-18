@@ -134,7 +134,7 @@
           BPM
           <span>-テンポ-</span>
         </h3>
-        <input type="range" v-model="tempo" @change="tempoChange()" min="60" max="200">
+        <input type="range" v-model="tempo" @change="tempoChange()" min="60" max="180">
         <p class="bpm">{{ tempo }}</p>
       </section>
     </div>
@@ -538,6 +538,8 @@ ul {
 
 .sequencer {
   display: inline-flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .sequencer__step {
